@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore the World</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h1 class="logo">
+            
+            <span>Explore the World</span>
+        </h1>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#attractions">Destinations</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li id="#book1"><a href="#book">Book Now</a></li>
+            <li><a href="booking.html"></a></li> 
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Discover the Wonders of the World</h1> 
+        <p>Embark on a journey across breathtaking landscapes, historic landmarks, and vibrant cultures.</p>
+        <a href="#book" class="cta-button">Start Your Adventure</a>
+    </section>
+
+    <!-- About Section -->
+    <section class=" about reveal" id="about">
+        <h2>Why Travel the World?</h2> <br>
+        <p>From the peaks of the Himalayas to the bustling streets of Tokyo,Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi molestias reiciendis dicta amet perspiciatis reprehenderit voluptates saepe quidem doloremque architecto! Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum ab quasi maiores nam nulla tempore minima voluptatem ducimus voluptates odit? the world is full of wonders waiting to be explored. Join us to uncover the beauty, diversity, and excitement of global travel.</p>
+    </section>
+
+     <!-- Weather Widget -->
+     <section class="weather-widget">
+        <h2>Check the Weather</h2>
+        <p>Plan your trip with real-time weather updates.</p>
+        <div class="weather-container">
+            <input type="text" id="city" placeholder="Enter city">
+            <button onclick="getWeather()">Check</button>
+            <p id="weather-result"></p>
+        </div>
+    </section>
+
+
+
+    >
+    
+    <!-- Attractions Section -->
+    <section class="attractions" id="attractions">
+        <h2>Top Destinations</h2>
+        <div class="attraction-grid">
+            <div class="attraction">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="paris.jpg" alt="Eiffel Tower, Paris">
+                        <h3>Paris, France</h3>
+                    </div>
+                    <div class="card-back">
+                        <p>The City of Lights, home to art, romance, and iconic architecture.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="attraction">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="japan.jpg" alt="Tokyo, Japan">
+                        <h3>Tokyo, Japan</h3>
+                    </div>
+                    <div class="card-back">
+                        <p>Experience the fusion of traditional temples and cutting-edge tech.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="attraction">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="newyork.avif" alt="New York City, USA">
+                        <h3>New York, USA</h3>
+                    </div>
+                    <div class="card-back">
+                        <p>The city that never sleeps, brimming with culture, food, and skyscrapers.</p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="attraction">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="rome.webp" alt="Rome, Italy">
+                        <h3>Rome, Italy</h3>
+                    </div>
+                    <div class="card-back">
+                        <p>Explore ancient ruins and marvel at historic architecture in the Eternal City.</p>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </section>
+    
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <h2>Photo Gallery</h2>
+        <div class="gallery-grid">
+            <img src="images (3).jpg" alt="Great Wall of China" onclick="openLightbox(this)">
+            <img src="pyramid.jpg" alt="Pyramids of Egypt" onclick="openLightbox(this)">
+            <img src="santorini greece.jpg" alt="Santorini, Greece" onclick="openLightbox(this)">
+            <img src="images.jpg" alt="Christ the Redeemer, Brazil" onclick="openLightbox(this)">
+            <img src="images (12).jpg" alt="Great Wall of China" onclick="openLightbox(this)">
+        </div>
+    
+        <!-- Lightbox Popup -->
+        <div id="lightbox" class="lightbox">
+            <span class="close-btn" onclick="closeLightbox()">&times;</span>
+            <img id="lightbox-img" src="" alt="Enlarged Image">
+        </div>
+    </section>
+    
+
+
+   <!-- Blog Section -->
+<section class="blog" id="blog">
+    <h2>Travel Tips & Guides</h2>
+    <div class="blog-container">
+        <article>
+            <div class="blog-image">
+                <img src="newyork.avif" alt="Budget Travel">
+            </div>
+            <div class="blog-content">
+                <h3>Top 10 Budget Travel Destinations</h3>
+                <p>Explore amazing places without breaking the bank.</p>
+                <a href="#">Read More</a>
+            </div>
+        </article>
+        
+        <article>
+            <div class="blog-image">
+                <img src="rome.webp" alt="Travel Accessories">
+            </div>
+            <div class="blog-content">
+                <h3>Must-Have Travel Accessories</h3>
+                <p>Gear up with essential travel accessories for a smooth trip.</p>
+                <a href="#">Read More</a>
+            </div>
+        </article>
+    </div>
+</section>
+
+
+
+    <section class="testimonials" id="testimonials">
+        <h2>What Our Travelers Say</h2>
+        <div class="testimonial-container">
+            <button class="prev-btn" onclick="changeTestimonial(-1)">&#10094;</button>
+            <div class="testimonial-slider">
+                <div class="testimonial active">
+                    <p>"This was the best trip of my life! Highly recommended!"</p>
+                    <h4>- Sarah M.</h4>
+                </div>
+                <div class="testimonial">
+                    <p>"A breathtaking experience, will definitely book again!"</p>
+                    <h4>- Jason L.</h4>
+                </div>
+                <div class="testimonial">
+                    <p>"Everything was perfectly organized. Amazing service!"</p>
+                    <h4>- Emily R.</h4>
+                </div>
+            </div>
+            <button class="next-btn" onclick="changeTestimonial(1)">&#10095;</button>
+        </div>
+        <div class="testimonial-dots">
+            <span class="dot" onclick="setTestimonial(0)"></span>
+            <span class="dot" onclick="setTestimonial(1)"></span>
+            <span class="dot" onclick="setTestimonial(2)"></span>
+        </div>
+    </section>
+    
+
+     <!-- Contact Form -->
+     <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Newsletter Subscription -->
+    <section class="newsletter">
+        <h2>Subscribe for Travel Updates</h2>
+        <p>Get exclusive travel deals and updates directly to your inbox.</p>
+        <input type="email" placeholder="Enter your email" required>
+        <button>Subscribe</button>
+    </section>
+
+    <button id="backToTop" class="back-to-top">⬆</button>
+
+
+
+    <!-- Footer / Call to Action -->
+    <footer>
+        <h2>Stay Connected</h2>
+        <p>Join our travel community for the latest updates, tips, and deals.</p>
+        <h2>Ready to Explore the World?</h2>
+            
+        <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+        
+        <div class="footer-divider"></div>
+            <a href="booking.html" id="book" class="cta-button">Book Your Trip Now</a> <br>
+        <p class="copyright">© <span id="year"></span> Your Brand. All Rights Reserved.</p>
+    </footer>
+    
+    <script>
+        // Dynamically Update Year
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    
+
+<script>
+    function getWeather() {
+    let result = document.getElementById("weather-result");
+    result.innerHTML = "Fetching weather data...";
+    
+    setTimeout(() => {
+        result.innerHTML = "🌤️ Sunny, 25°C";  // Simulated response
+        result.classList.add("show");
+    }, 1000);
+}
+
+</script>
+
+<script>
+    // Smooth Scrolling
+    const links = document.querySelectorAll('.navbar ul li a');
+    links.forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+    
+    // Navbar Scroll Effect
+    window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+            navbar.style.background = '#0a2e4f';
+        } else {
+            navbar.style.background = '';
+        }
+    });
+
+
+
+
+    </script>
+    <script>
+         document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll(".reveal");
+
+    function revealOnScroll() {
+        sections.forEach((section) => {
+            const sectionTop = section.getBoundingClientRect().top;
+            if (sectionTop < window.innerHeight - 100) {
+                section.classList.add("active");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", revealOnScroll);
+    revealOnScroll(); // Trigger on page load
+});
+    </script>
+    <script>
+let currentTestimonial = 0;
+const testimonials = document.querySelectorAll(".testimonial");
+const dots = document.querySelectorAll(".dot");
+
+function updateTestimonials() {
+    testimonials.forEach((testimonial, index) => {
+        testimonial.style.display = index === currentTestimonial ? "block" : "none";
+    });
+
+    dots.forEach((dot, index) => {
+        dot.classList.toggle("active", index === currentTestimonial);
+    });
+}
+
+function changeTestimonial(step) {
+    currentTestimonial += step;
+    if (currentTestimonial >= testimonials.length) currentTestimonial = 0;
+    if (currentTestimonial < 0) currentTestimonial = testimonials.length - 1;
+    updateTestimonials();
+}
+
+function setTestimonial(index) {
+    currentTestimonial = index;
+    updateTestimonials();
+}
+
+// Show the first testimonial initially
+updateTestimonials();
+
+
+    </script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll("section");
+
+    const observer = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        { threshold: 0.3 }
+    );
+
+    sections.forEach((section) => {
+        observer.observe(section);
+    });
+});
+
+    </script>
+
+    <script>
+        const backToTopBtn = document.getElementById("backToTop");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+        backToTopBtn.classList.add("show");
+    } else {
+        backToTopBtn.classList.remove("show");
+    }
+});
+
+backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+    </script>
+    <script>
+        // Open Lightbox
+function openLightbox(img) {
+    document.getElementById("lightbox").classList.add("active");
+    document.getElementById("lightbox-img").src = img.src;
+}
+
+// Close Lightbox
+function closeLightbox() {
+    document.getElementById("lightbox").classList.remove("active");
+}
+
+    </script>
+    
+    </body>
+</html>
